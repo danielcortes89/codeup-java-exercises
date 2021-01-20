@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class HelloWorld {
     public static void main(String[] args){
         System.out.println("Hello World!");
@@ -13,5 +15,9 @@ public class HelloWorld {
         x /= y;
         y -= x;
         System.out.println(y);
+
+        String greeting = "Salutations";
+        String name = "codeup";
+        System.out.printf("%s, %s!", greeting, name);
     }
 }
