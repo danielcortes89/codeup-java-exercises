@@ -14,6 +14,7 @@ public class ConsoleExercises {
 //        System.out.printf("You entered: %s", userInput);
 
 
+//        SCANNER CLASS
 //        System.out.printf("Enter Three words: ");
 //        String inputOne = scanner.next();
 //        String inputTwo = scanner.next();
@@ -27,9 +28,12 @@ public class ConsoleExercises {
         System.out.println("Enter length and width: ");
         String userInput = scanner.nextLine();
         String userInputTwo = scanner.nextLine();
-        int result =  Integer.parseInt(userInput);
-        int resultTwo =  Integer.parseInt(userInputTwo);
-        int perimeter = (result * 2) + resultTwo * 2;
-        System.out.println("Area is: " + result * resultTwo + " And Perimeter is: " + perimeter);
+        String userInputThree = scanner.nextLine();
+        float result =  Float.parseFloat(userInput);
+        float resultTwo =  Float.parseFloat(userInputTwo);
+        float resultThree =  Float.parseFloat(userInputThree);
+        Float perimeter = (result * 2) + resultTwo * 2;
+        Float volume = result * resultTwo * resultThree;
+        System.out.println("Area is: " + result * resultTwo + " And Perimeter is: " + perimeter + " And Volume is: " + volume);
     }
 }
