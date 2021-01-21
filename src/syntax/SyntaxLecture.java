@@ -2,16 +2,20 @@ package syntax;
 
 public class SyntaxLecture {
 
+//    psvm tab
     public static void main(String[] args) {
 
         // ================== STATEMENTS (s-3)
 
         // Statements may be...
         // Declarations
+        double notPi;
 
         // Assignment expressions
+        notPi = 3;
 
         // Any use of ++ or --
+        notPi++;
 
         // Method invocations
 
