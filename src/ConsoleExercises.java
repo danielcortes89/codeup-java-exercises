@@ -2,10 +2,12 @@ import java.sql.SQLOutput;
 import java.util.Scanner;
 
 
+
 public class ConsoleExercises {
 //    psvm tab
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
+        scanner.useDelimiter("\n");
         double pi = 3.14159;
 //        System.out.printf("The value of pi is approximately %s", pi);
 
@@ -25,6 +27,7 @@ public class ConsoleExercises {
 //        String userInput = scanner.nextLine();
 //        System.out.printf("You entered: %s", userInput);
 
+//        PERIMETER and AREA
         System.out.println("Enter length and width: ");
         String userInput = scanner.nextLine();
         String userInputTwo = scanner.nextLine();

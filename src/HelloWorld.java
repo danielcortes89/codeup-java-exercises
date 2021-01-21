@@ -10,6 +10,11 @@ public class HelloWorld {
         String myString = "3.14159";
         System.out.println(myString);
 
+        String theNumberThree = "three";
+        Object o = theNumberThree;
+//        int three = (int) o;
+//        int three = (int) "three";
+
         int x = 10;
         int y = 2;
         x /= y;
