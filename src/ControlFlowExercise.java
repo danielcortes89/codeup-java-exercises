@@ -4,28 +4,27 @@ import java.util.Scanner;
 public class ControlFlowExercise {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("What number would you like to go up to");
-        int userInput = scanner.nextInt();
-        int i = 1;
+        System.out.println("What was you score?");
+        int gradeInput = scanner.nextInt();
 
-        System.out.println("Here is your table!\n");
+        String grade = "hold";
 
-        System.out.println("number | squared | cubed");
-        System.out.println("------ | ------- | -----");
-        do{
-            System.out.println(i + " | " + i * i + " | " + i * i * i);
+        System.out.println("Wanna see your Number grade?");
+        String gradeContinue = scanner.next();
 
-            i++;
-        }while(i <= userInput);
-        System.out.println("Wanna go again?");
-        String userContinue = scanner.next();
-        if(userContinue.equals("y")){
-            System.out.println(i + " | " + i * i + " | " + i * i * i);
+        if(gradeContinue.equals("y")){
+            if(gradeInput > 87){
+                grade = "A";
+            } else if(gradeInput < 88 && gradeInput >79){
+                grade = "B";
+            } else if(gradeInput < 80 && gradeInput > 66){
+                grade = "C";
+            } else if(gradeInput < 67 && gradeInput > 59){
+                grade = "D";
+            } else if(gradeInput < 60) {
+                grade = "F";
+            }
         }
-
-//        System.out.println(userInput + " | " + userInput * userInput + " | " + userInput * userInput * userInput);
-//        while(i < 101){
-//
-//        }
+        System.out.println(grade);
     }
 }
