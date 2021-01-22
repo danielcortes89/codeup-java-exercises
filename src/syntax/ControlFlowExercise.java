@@ -2,22 +2,26 @@ package syntax;
 
 public class ControlFlowExercise {
     public static void main(String[] args) {
-        int i = 2;
-        int max = 10000;
+        int i = 1;
 
-//        do{
-//            System.out.println(i);
-//            i += 2;
-//        } while(i < 100);
-//
-//        do{
-//            System.out.println(i);
-//            i -= 5;
-//        } while(i >= -10);
-
-        do{
+        while(i < 101){
+            if(i % 5 == 0 && i % 3 == 0){
+                System.out.println("FizzBuzz");
+                i++;
+                continue;
+            }
+            if(i % 5 == 0){
+                System.out.println("Buzz");
+                i++;
+                continue;
+            }
+            if(i % 3 == 0){
+                System.out.println("Fizz");
+                i++;
+                continue;
+            }
             System.out.println(i);
-            i = i * i;
-        } while(i <= max);
+            i++;
+        }
     }
 }
