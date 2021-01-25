@@ -1,20 +1,25 @@
 import java.util.Scanner;
+import
 
 public class MethodsExercise {
     Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
 
-        addition(2, 2);
-        subtraction(2, 2);
-        multiplication(2, 2);
-        division(2, 2);
-        modulus(2, 2);
+//        addition(2, 2);
+//        subtraction(2, 2);
+//        multiplication(2, 2);
+//        division(2, 2);
+//        modulus(2, 2);
 
 //        System.out.println("Enter a number between 1 and 10");
 //        int userInput = getInteger(1, 10);
-        System.out.println("Please enter an integer from 1 to 10");
-        getFactorial();
+
+
+//        System.out.println("Please enter an integer from 1 to 10");
+//        getFactorial();
+
+        playGame();
 
     }
 
@@ -89,5 +94,24 @@ public class MethodsExercise {
             cleaned = Integer.parseInt(userInputRedo);
         }
         return cleaned;
+    }
+
+    public static void playGame(){
+        System.out.println("How many sides do you want your dice to have?");
+        Scanner scanner = new Scanner(System.in);
+
+        String numSides = scanner.nextLine();
+        int cleaned = Integer.parseInt(numSides);
+
+        System.out.println("type yes to roll dice. Anything else to quit");
+        String response = scanner.next();
+
+        if(response.equals("yes")){
+            System.out.println("Success");
+        }
+    }
+
+    public static int rollDie(int rollNum){
+return 5
     }
 }
