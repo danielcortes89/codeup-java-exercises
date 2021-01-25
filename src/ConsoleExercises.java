@@ -8,7 +8,7 @@ public class ConsoleExercises {
         Scanner scanner = new Scanner(System.in);
         scanner.useDelimiter("\n");
         double pi = 3.14159;
-//        System.out.printf("The value of pi is approximately %s", pi);
+//        System.out.printf("The value of pi is approximately %.2f", pi);
 
 //        System.out.printf("Enter Something: ");
 //        int userInput = scanner.nextInt();
