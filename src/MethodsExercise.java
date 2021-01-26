@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import
+import java.lang.Math;
 
 public class MethodsExercise {
     Scanner scanner = new Scanner(System.in);
@@ -107,11 +107,23 @@ public class MethodsExercise {
         String response = scanner.next();
 
         if(response.equals("yes")){
+            rollDie(cleaned);
             System.out.println("Success");
+            System.out.println("Play again? Type yes");
+            String repeat = scanner.next();
+
+            if (repeat.equals("yes")) {
+                playGame();
+            }
         }
     }
 
-    public static int rollDie(int rollNum){
-return 5
+    public static void rollDie(int rollNum){
+        double rollOne = Math.floor(Math.random() * rollNum);
+        double rollTwo = Math.floor(Math.random() * rollNum);
+
+        System.out.println("First Die: "  + rollOne);
+        System.out.println("Second Die: "  + rollTwo);
+//        return 5;
     }
 }
