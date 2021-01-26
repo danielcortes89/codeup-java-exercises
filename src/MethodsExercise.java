@@ -54,13 +54,7 @@ public class MethodsExercise {
             System.out.println("Once more.");
             getInteger(1, 10);
         }
-//
-//        String userInputThree = scanner.nextLine();
-//        int result =  Integer.parseInt(userInputThree);
-//
-//        if(result instanceof Integer){
-//
-//        }
+
         return 5;
     }
 
