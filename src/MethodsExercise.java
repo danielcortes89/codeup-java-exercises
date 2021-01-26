@@ -12,14 +12,14 @@ public class MethodsExercise {
 //        division(2, 2);
 //        modulus(2, 2);
 
-//        System.out.println("Enter a number between 1 and 10");
-//        int userInput = getInteger(1, 10);
+        System.out.println("Enter a number between 1 and 10");
+        int userInput = getInteger(1, 10);
 
 
 //        System.out.println("Please enter an integer from 1 to 10");
 //        getFactorial();
 
-        playGame();
+//        playGame();
 
     }
 
@@ -45,7 +45,15 @@ public class MethodsExercise {
 
     public static int getInteger(int a, int b){
         Scanner scanner = new Scanner(System.in);
-
+        int guess = scanner.nextInt();
+        if(guess < b && guess > a){
+            System.out.println("Good");
+            System.out.println(guess);
+        } else {
+            System.out.println("That won't fly");
+            System.out.println("Once more.");
+            getInteger(1, 10);
+        }
 //
 //        String userInputThree = scanner.nextLine();
 //        int result =  Integer.parseInt(userInputThree);
