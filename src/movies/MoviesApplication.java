@@ -35,13 +35,31 @@ public class MoviesApplication {
             }
         }
         else if(userSelection.equals("3")){
-            System.out.println("Drama Queen");
+            System.out.println("Drama Queen\n");
+
+            for(Movie film : allFilms){
+                if(film.getCategory().equals("drama")){
+                    System.out.println(displayFilm(film));
+                }
+            }
         }
         else if(userSelection.equals("4")){
             System.out.println("The Horror!");
+
+            for(Movie film : allFilms){
+                if(film.getCategory().equals("horror")){
+                    System.out.println(displayFilm(film));
+                }
+            }
         }
         else if(userSelection.equals("5")){
             System.out.println("Sci fi....");
+
+            for(Movie film : allFilms){
+                if(film.getCategory().equals("scifi")){
+                    System.out.println(displayFilm(film));
+                }
+            }
         } else {
             System.out.println("Come back when you're serious");
         }
