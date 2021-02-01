@@ -3,23 +3,29 @@ import java.util.Scanner;
 
 public class Input {
     private Scanner scanner;
-    Input(){
+    public Input(){
         this.scanner = new Scanner(System.in);
     }
 
-    String getString(){
+    public String getString(){
         System.out.println("Type something in.");
         String input = this.scanner.nextLine();
         return input;
     };
 
-    boolean yesNo(){
+    public boolean yesNo(){
         System.out.println("yes or no?");
-        return this.scanner.nextBoolean();
+        String answer = this.scanner.nextLine();
+        if(answer.equalsIgnoreCase("yes") || answer.equalsIgnoreCase("y")){
+            return true;
+        } else {
+            return false;
+        }
+//        return answer;
 //        return input;
     }
 
-    int getInt(int min, int max){
+    public int getInt(int min, int max){
         System.out.println("Enter a number between " + min + " and " + max);
 
         while(true){
@@ -34,7 +40,7 @@ public class Input {
         return this.scanner.nextInt();
     }
 
-    double getDouble(double min, double max){
+    public double getDouble(double min, double max){
         double userInput = this.scanner.nextInt();
         if(userInput > max || userInput < min){
             System.out.println("Try again");
@@ -44,7 +50,7 @@ public class Input {
         return userInput;
     }
 
-    double getDouble(){
+    public double getDouble(){
         double userInput = this.scanner.nextInt();
         System.out.println("Enter a number between 1 and 10");
         if(userInput < 10 && userInput > 1){

@@ -11,7 +11,7 @@ public class Circle {
     }
 
     double getArea(){
-        return (radius * radius) * Math.PI;
+        return (this.radius * this.radius) * Math.PI;
     }
 
     double getCircumference(){
