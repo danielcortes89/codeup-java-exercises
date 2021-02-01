@@ -8,7 +8,6 @@ public class Input {
     }
 
     public String getString(){
-        System.out.println("Type something in.");
         String input = this.scanner.nextLine();
         return input;
     };
