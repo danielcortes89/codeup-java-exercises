@@ -20,8 +20,8 @@ public class ArraysExercise {
 
     public static Person[] addPerson(Person[] people, Person dude){
         int newLength = people.length;
-        Person[] newArray = Arrays.copyOf(people, 4);
-        newArray[3] = dude;
+        Person[] newArray = Arrays.copyOf(people, newLength);
+        newArray[newLength] = dude;
 
         return newArray;
     }
