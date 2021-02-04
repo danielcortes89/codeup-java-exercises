@@ -1,10 +1,12 @@
 package grades;
 
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class GradesApplication {
     public static void main(String[] args) {
         HashMap<String, Student> students = new HashMap<>();
+        Scanner in = new Scanner(System.in);
 
         Student student1 = new Student("Enrique Martinez");
         Student student2 = new Student("Fraulein Hammersmark");
@@ -35,6 +37,22 @@ public class GradesApplication {
         System.out.println("Welcome!");
         System.out.println("Here are the Github usernames of our students:");
 
-        students.forEach((String, Student) -> System.out.println(Student.getName()));
+        students.forEach((String, Student) -> System.out.println(Student.getName() + " - " + String));
+        System.out.println("\n");
+        askUser(students);
+    }
+
+    static void askUser(HashMap students){
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Who do you want more information on?");
+        String searchTerm = in.nextLine();
+
+        if(students.containsKey(searchTerm)){
+            System.out.println("Name: " + students.get(searchTerm).getName());
+            System.out.println("Current GPA: " + students.get(searchTerm).getGradeAverage());
+        } else {
+            System.out.println("Sorry, no student found with username " + searchTerm);
+        }
     }
 }
