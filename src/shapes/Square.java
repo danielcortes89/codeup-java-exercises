@@ -12,17 +12,17 @@ public class Square extends Quadrilateral{
     }
 
 //    @Override
-    public double getPerimeter() {
+    public int getPerimeter() {
         return (4 * width);
     }
 
 //    @Override
-    public double getArea() {
+    public int getArea() {
         return this.width * this.length;
     }
 
-    Square(){
-        super(5, 5);
+    Square(int length){
+        super(length, length);
     }
 }
 

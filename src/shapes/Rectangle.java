@@ -5,6 +5,22 @@ public class Rectangle extends Quadrilateral implements Measurable{
     public void setWidth(int width) {
         this.width = width;
     }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public int getPerimeter() {
+        return (4 * width);
+    }
+
+    public int getArea() {
+        return this.width * this.length;
+    }
+
+    Rectangle(int length, int width){
+        super(2, 4);
+    }
 }
 
 //public class Rectangle {
