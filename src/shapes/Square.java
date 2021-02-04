@@ -18,9 +18,12 @@ public class Square extends Quadrilateral{
 
 //    @Override
     public double getArea() {
-        return width * length;
+        return this.width * this.length;
     }
-    Quadrilateral()
+
+    Square(){
+        super(5, 5);
+    }
 }
 
 //public class Square extends Rectangle{

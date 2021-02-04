@@ -1,7 +1,10 @@
 package shapes;
 
 public class Rectangle extends Quadrilateral implements Measurable{
-
+//    @Override
+    public void setWidth(int width) {
+        this.width = width;
+    }
 }
 
 //public class Rectangle {
