@@ -39,20 +39,33 @@ public class GradesApplication {
 
         students.forEach((String, Student) -> System.out.println(Student.getName() + " - " + String));
         System.out.println("\n");
+
         askUser(students);
+
+        System.out.println("Thanks for coming!");
     }
 
     static void askUser(HashMap students){
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Who do you want more information on?");
+        System.out.println("Who do you want more information on? Enter username");
         String searchTerm = in.nextLine();
 
+
+
         if(students.containsKey(searchTerm)){
-            System.out.println("Name: " + students.get(searchTerm).getName());
-            System.out.println("Current GPA: " + students.get(searchTerm).getGradeAverage());
+            Student student = (Student) students.get(searchTerm);
+
+            System.out.println("Name: " + student.getName());
+            System.out.println("Current GPA: " + student.getGradeAverage());
         } else {
             System.out.println("Sorry, no student found with username " + searchTerm);
+        }
+        System.out.println("Want to search again?");
+        String continueLoop = in.nextLine();
+
+        if(continueLoop.equalsIgnoreCase("yes")){
+            askUser(students);
         }
     }
 }
