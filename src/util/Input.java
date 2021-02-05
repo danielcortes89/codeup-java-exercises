@@ -35,7 +35,7 @@ public class Input {
         }
     }
 
-    int getInt(){
+    public int getInt(){
         return this.scanner.nextInt();
     }
 
@@ -51,12 +51,14 @@ public class Input {
 
     public double getDouble(){
         double userInput = this.scanner.nextInt();
-        System.out.println("Enter a number between 1 and 10");
+
         if(userInput < 10 && userInput > 1){
+//            System.out.println("Success " + userInput);
+        } else {
             System.out.println("Try again");
             getDouble();
         }
-        System.out.println("Success " + userInput);
+
         return userInput;
     }
 
