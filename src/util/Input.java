@@ -63,16 +63,19 @@ public class Input {
     }
 
     public double getDouble(){
-        double userInput = this.scanner.nextInt();
+        double userInput;
 
-        if(userInput < 10 && userInput > 1){
-//            System.out.println("Success " + userInput);
-        } else {
-            System.out.println("Try again");
-            getDouble();
+        try {
+            userInput = Double.valueOf(getString());
+            return userInput;
+        } catch (Exception e){
+            System.out.println("We have a problem: " + e.getMessage());
+            System.out.println("Try again.");
+            return getDouble();
         }
 
-        return userInput;
+
+
     }
 
 
