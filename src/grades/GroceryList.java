@@ -26,27 +26,38 @@ public class GroceryList {
 
             System.out.println("Want to add an item?");
             if(input.getString().equalsIgnoreCase("yes")){
+                boolean nextItem = true;
 
 
-//                if(ans.equalsIgnoreCase("fruit") || ans.equalsIgnoreCase("veg") || ans.equalsIgnoreCase("animal")){
-//                    String nameToAdd;
-//                    double quantityToAdd;
-//
-//                    System.out.println("Enter the item");
-//                    nameToAdd = input.getString();
-//
-//                    System.out.println("And the amount?");
-//                    quantityToAdd = input.getInt();
-//
-//                    HashMap target = groceryList.get(ans.toLowerCase());
-//
-//                    target.put(nameToAdd, quantityToAdd);
-//
-//                    System.out.println(target);
-//                } else {
-//                    System.out.println("Enter an actual category.");
-//                }
-                addItem(groceryList);
+                while(nextItem){
+                    addItem(groceryList);
+
+                    System.out.println("Add another item?");
+                    String newItem = input.getString();
+
+                    if(newItem.equalsIgnoreCase("yes")){
+                        System.out.println(groceryList);
+                    } else {
+                        nextItem = false;
+                    }
+
+                }
+                System.out.println(groceryList);
+
+                System.out.println("Fruits: \n");
+
+                HashMap fruitFinal = groceryList.get("fruit");
+                fruitFinal.forEach((String, HashMap) -> System.out.println(String + ": " + HashMap));
+
+                System.out.println("Vegetables: \n");
+
+                HashMap vegFinal = groceryList.get("veg");
+                vegFinal.forEach((String, HashMap) -> System.out.println(String + ": " + HashMap));
+
+                System.out.println("Animals: \n");
+
+                HashMap animalFinal = groceryList.get("animal");
+                animalFinal.forEach((String, HashMap) -> System.out.println(String + ": " + HashMap));
             }
         } else {
             System.out.println("Goodbye");

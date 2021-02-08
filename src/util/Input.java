@@ -25,7 +25,7 @@ public class Input {
     }
 
     public int getInt(int min, int max){
-        System.out.println("Enter a number between " + min + " and " + max);
+//        System.out.println("Enter a number between " + min + " and " + max);
 
         while(true){
             int userInput = this.scanner.nextInt();
@@ -36,7 +36,16 @@ public class Input {
     }
 
     public int getInt(){
-        return this.scanner.nextInt();
+        String userInput = getString();
+
+        try {
+            Integer.valueOf(userInput);
+        } catch (Exception e){
+            System.out.println("We have a problem: " + e.getMessage());
+            e.printStackTrace();
+        }
+
+        return Integer.valueOf((userInput));
     }
 
     public double getDouble(double min, double max){
