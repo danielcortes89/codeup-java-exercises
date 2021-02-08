@@ -36,16 +36,20 @@ public class Input {
     }
 
     public int getInt(){
-        String userInput = getString();
+//        String userInput = getString();
+
+        int number;
 
         try {
-            Integer.valueOf(userInput);
+            number = Integer.valueOf(getString());
+            return number;
         } catch (Exception e){
             System.out.println("We have a problem: " + e.getMessage());
-            e.printStackTrace();
+            System.out.println("Try again.");
+            return getInt();
         }
 
-        return Integer.valueOf((userInput));
+
     }
 
     public double getDouble(double min, double max){
