@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 
-public class ControlFlowExercise {
+public class ControlFlowExercises {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("What was you score?");

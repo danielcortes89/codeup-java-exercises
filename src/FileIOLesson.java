@@ -23,7 +23,7 @@ public class FileIOLesson {
             Files.createFile(dataFile);
         }
 
-        List<String> languages = Arrays.asList("jJava");
+        List<String> languages = Arrays.asList("jJava", "Javascript");
 
         Files.write(dataFile, languages);
 

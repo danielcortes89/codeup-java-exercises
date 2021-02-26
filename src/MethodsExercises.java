@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.lang.Math;
 
-public class MethodsExercise {
+public class MethodsExercises {
     Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
